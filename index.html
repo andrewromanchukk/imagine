@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cart.css">
     <title>Imagine Shop</title>
 </head>
 <body>
     <header class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Imagine</a>
+            <a class="navbar-brand" href="index.html">Imagine</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contacts</a>
@@ -28,13 +29,12 @@
                     <a class="nav-link" href="#">About Us</a>
                 </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link" rel="nofollow" href="cart.html">Корзина<span id="total-cart-count" class="badge"></span></a>
-                </li>
-                <br>
-                    <ul id="goods" class="list-unstyled">
-                        <img src="img/loading.gif" alt="" rel="nofollow">
-                    </ul>
+                <li class="nav-item cart">
+                  <a class="nav-link" rel="nofollow" href="cart.html">
+                      <ion-icon name="basket-outline"></ion-icon>Cart <span>0</span>
+                  </a>
+              </li>
+            </ul>
                 
                 
               </ul>
@@ -67,73 +67,40 @@
         <h2>Products</h2>
         <div class="row">
             <article class="card col-12 col-sm-6 col-md-4 col-lg-3" >
-                <img src="img/product-1.png" class="card-img-top" alt="...">
+                <img src="img/product-ball.png" class="card-img-top" alt="Ball">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">E[ample text</p>
-                  <a href="#" class="btn btn-primary"  data-toggle="modal" data-target="#productModalLabel">Go somewhere</a>
+                  <h5 class="card-title">Ball</h5>
+                  <p class="card-text">2000,00</p>
+                  <a  class="btn btn-primary add-cart" href="#" >Add Cart</a>
                 </div>
             </article>
             <article class="card col-12 col-sm-6 col-md-4 col-lg-3" >
-                <img src="img/product-1.png" class="card-img-top" alt="...">
+                <img src="img/product-skateboard.png" class="card-img-top" alt="Skateboard">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">E[ample text</p>
-                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModalLabel">Go somewhere</a>
+                  <h5 class="card-title">Skateboard</h5>
+                  <p class="card-text">2500,00</p>
+                  <a href="#" class="btn btn-primary add-cart" >Add Cart</a>
                 </div>
             </article>
             <article class="card col-12 col-sm-6 col-md-4 col-lg-3" >
-                <img src="img/product-1.png" class="card-img-top" alt="...">
+                <img src="img/product-snowbaord.png" class="card-img-top" alt="Snowboard">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">E[ample text</p>
-                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModalLabel">Go somewhere</a>
+                  <h5 class="card-title">Snowboard</h5>
+                  <p class="card-text">3500,00</p>
+                  <a href="#" class="btn btn-primary add-cart" >Add Cart</a>
                 </div>
             </article>
             <article class="card col-12 col-sm-6 col-md-4 col-lg-3">
-                <img src="img/product-1.png" class="card-img-top" alt="...">
+                <img src="img/product-bike.png" class="card-img-top" alt="Bicykle">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">E[ample text</p>
-                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModalLabel">Go somewhere</a>
-            </article>
-            <article class="card col-12 col-sm-6 col-md-4 col-lg-3" >
-                <img src="img/product-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">E[ample text</p>
-                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModalLabel">Go somewhere</a>
-                </div>
-            </article>
-            <article class="card col-12 col-sm-6 col-md-4 col-lg-3" >
-                <img src="img/product-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">E[ample text</p>
-                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModalLabel">Go somewhere</a>
-                </div>
-            </article>
-            <article class="card col-12 col-sm-6 col-md-4 col-lg-3" >
-                <img src="img/product-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">E[ample text</p>
-                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModalLabel">Go somewhere</a>
-                </div>
-            </article>
-            <article class="card col-12 col-sm-6 col-md-4 col-lg-3" >
-                <img src="img/product-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">E[ample text</p>
-                  <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModalLabel">Go somewhere</a>
-                </div>
+                  <h5 class="card-title">Bicykle</h5>
+                  <p class="card-text">5000,00</p>
+                  <a href="#" class="btn btn-primary add-cart" >Add Cart</a>
             </article>
         </div>
         
     </main>
-    <footer class="container">
-        
+    <footer >
         <div class="footer">
             <div class="copyright">
                 <p>copyright by</p>
@@ -145,7 +112,6 @@
                 <img src="img/telegram.png" alt="telegram">
             </div>
         </div>
-        
     </footer>
 
 
@@ -153,29 +119,7 @@
 
     
   
-  <!-- Modal -->
-  <div class="modal fade" id="productModalLabel" tabindex="-1" role="dialog" aria-labelledby="productModalLabelTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="productModalLabelTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <img src="img/product-1.png" class="card-img-top card-title-small" alt="...">
-            <div class="card-body">
-              <h5 class="card-title ">Card title</h5>
-              <p class="card-text">E[ample text</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
 
 
@@ -184,5 +128,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="js/vendor/underscore.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
