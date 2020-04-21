@@ -1,0 +1,19 @@
+.card-title-small{
+    height: 300px;
+}
+.footer{
+    padding-bottom: 20px;
+    background-color: #000;
+}
+.social-media-icons{
+    display: flex;
+    justify-content: center;
+}
+.footer img{
+    width: 30px;
+}
+.copyright{
+    text-transform: capitalize;
+    color: #fff;
+    text-align: center;
+}
