@@ -9,3 +9,42 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+.product-title{
+    width: 45%;
+}
+.price{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.quantity{
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+.total{
+   width: 25%; 
+   display: flex;
+    align-items: center;
+   
+}
+
+.products ion-icon{
+    font-size: 25px;
+    color: blue;
+   
+}
+.product{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.wrapper-products{
+    display: flex;
+}
+.products{
+    
+
+    border-bottom: 2px dashed red;
+}

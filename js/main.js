@@ -3,25 +3,25 @@ let carts = document.querySelectorAll('.add-cart');
 let products = [
     {
         name:'Ball',
-        tag: 'socerball',
+        tag: 'product-ball',
         price:2000,
         inCart:0
     },
     {
         name:'Skateboard',
-        tag: 'blackskateboard',
+        tag: 'product-skateboard',
         price:2500,
         inCart:0
     },
     {
         name:'Snowboard',
-        tag: 'whitesnowboard',
+        tag: 'product-snowboard',
         price:3500,
         inCart:0
     },
     {
         name:'Bicykle',
-        tag: 'blackbicykle',
+        tag: 'product-bicycle',
         price:5000,
         inCart:0
     }
@@ -81,7 +81,6 @@ function setItems(product){
 }
 
 function totalCost(product){
-    // console.log("The product price is", product.price);
     let cartCost = localStorage.getItem('totalCost');
     
     console.log("My CartCost is", cartCost);
@@ -89,7 +88,8 @@ function totalCost(product){
 
     if(cartCost != null){
         cartCost = parseInt(cartCost);
-        localStorage.setItem("totalCost", cartCost + product.price);
+        localStorage.setItem("totalCost", cartCost + 
+        product.price);
 
     }else{
         localStorage.setItem("totalCost", product.price);
@@ -97,5 +97,28 @@ function totalCost(product){
     }
 
 }
+function displayCart(){
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".products");
+
+    if(cartItems && productContainer){
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <div class="wrapper-products>"
+            <div class="product">
+                <ion-icon name="close-circle-outline"></ion-icon>
+                <img src="./img/${item.tag}.png">
+                <span>${item.name}</span>
+            </div>
+            <div class="price">${item.price}</div>
+            </div>
+            `
+        });
+    }
+}
+
 
 onLoadCartNumbers();
+displayCart();
